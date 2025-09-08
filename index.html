@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Economics PhD Candidate</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Your Name — PhD Candidate in Economics at Michigan State University. Research in macro-finance, banking, and supply chains." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Your Name" />
+      <div>
+        <h1>Hi, I’m <span class="highlight">Your Name</span>.</h1>
+        <p>
+          I am a PhD candidate in Economics at <em>Michigan State University</em>.
+          My research interests include macro-finance, banking, and supply-chain dynamics.
+        </p>
+        <p class="cta-row">
+          <a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="button ghost" href="mailto:you@msu.edu">you@msu.edu</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="cards">
+      <a class="card" href="research.html">
+        <h2>Research</h2>
+        <p>Job market paper, working papers, and works in progress.</p>
+      </a>
+      <a class="card" href="teaching.html">
+        <h2>Teaching</h2>
+        <p>Courses, materials, evaluations, and office hours.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="year"></span> Your Name • <a href="https://your-username.github.io/">your-username.github.io</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
