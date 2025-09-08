@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Research</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Research</h1>
+
+    <section class="paper">
+      <h2>Job Market Paper</h2>
+      <p><strong>Title:</strong> “Your Paper Title Here”</p>
+      <p><strong>Abstract:</strong> A concise 4–6 sentence abstract describing your main contribution and findings.</p>
+      <p class="links">
+        <a class="button" href="assets/JMP.pdf" target="_blank" rel="noopener">PDF</a>
+        <a class="button ghost" href="#">Slides</a>
+      </p>
+    </section>
+
+    <hr />
+
+    <section class="paper">
+      <h2>Working Papers</h2>
+      <ul class="list">
+        <li>
+          “Paper Title 1” (with Coauthor A and Coauthor B). 
+          <a href="#" target="_blank" rel="noopener">PDF</a> ·
+          <a href="#" target="_blank" rel="noopener">Online Appendix</a>
+        </li>
+        <li>
+          “Paper Title 2”.
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="paper">
+      <h2>Work in Progress</h2>
+      <ul class="list">
+        <li>“Project Title A” — brief 1–2 sentence summary.</li>
+        <li>“Project Title B” — brief 1–2 sentence summary.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Your Name</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
