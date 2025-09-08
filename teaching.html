@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Teaching</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav>
+        <a href="research.html">Research</a>
+        <a class="active" href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Teaching</h1>
+
+    <section class="course">
+      <h2>Instructor, ECO 3xx: Course Name (Fall 2025)</h2>
+      <ul class="list">
+        <li><strong>Syllabus:</strong> <a href="assets/ECO3xx_syllabus.pdf" target="_blank" rel="noopener">PDF</a></li>
+        <li><strong>Office Hours:</strong> Tue 2–4pm or by appointment</li>
+        <li><strong>Location:</strong> Berkey Hall 123</li>
+      </ul>
+    </section>
+
+    <section class="course">
+      <h2>TA, ECO 2xx: Course Name (Spring 2025)</h2>
+      <ul class="list">
+        <li><strong>Sections:</strong> 001, 002</li>
+        <li><strong>Materials:</strong> <a href="#" target="_blank" rel="noopener">Problem Sets</a></li>
+        <li><strong>Evaluations:</strong> <a href="#" target="_blank" rel="noopener">Summary</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Your Name</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
