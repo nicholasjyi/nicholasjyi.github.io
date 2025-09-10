@@ -1,12 +1,21 @@
+/* ================================
+   Styles for Nicholas Jaehyun Yi
+   - Dark-blue header (double height)
+   - Larger fonts
+   - One-section-at-a-time view with scroll snap
+   - Bigger gaps between sections
+   - Hero content nudged higher
+   ================================ */
+
 /* Theme */
 :root {
   --bg: #ffffff;
   --ink: #0f172a;
   --muted: #475569;
-  --brand: #2563eb;         /* link/button accent */
+  --brand: #2563eb;
   --border: #e5e7eb;
 
-  --nav-bg: #0b1d4d;        /* DARK BLUE header */
+  --nav-bg: #0b1d4d;   /* DARK BLUE header band */
   --nav-ink: #ffffff;
   --nav-muted: #cbd5e1;
 
@@ -14,20 +23,24 @@
   --radius-md: 14px;
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
 
-  /* DOUBLE the header height here */
-  --header-h: 140px;        /* ~double the previous band height */
+  --header-h: 140px;   /* doubled header height */
+  --page-gap: 6rem;    /* widen the gap between sections */
 }
 
 /* Base */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;   /* snap each section into view */
+  scroll-padding-top: var(--header-h); /* account for sticky header when jumping */
+}
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; display: block; }
 
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
   "Apple Color Emoji","Segoe UI Emoji";
-  font-size: 18px;          /* larger base */
+  font-size: 18px;     /* larger base */
   color: var(--ink);
   background: var(--bg);
   line-height: 1.7;
@@ -55,7 +68,7 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset;
   min-height: var(--header-h);
-  display: flex; align-items: center;   /* vertically center content in tall band */
+  display: flex; align-items: center; /* vertically center content in tall band */
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; }
 .brand { font-weight: 800; color: var(--nav-ink); text-decoration: none; font-size: 1.2rem; }
@@ -68,15 +81,22 @@ nav a {
 nav a:hover, nav a.active { color: var(--nav-ink); background: rgba(255,255,255,0.14); }
 
 /* Sections */
-.section { padding: 2.5rem 0; scroll-margin-top: calc(var(--header-h) + 10px); }
+.section {
+  /* Each section occupies (at least) one full viewport minus the header,
+     so you won't see the next section peeking below. */
+  min-height: calc(100vh - var(--header-h));
+  padding: var(--page-gap) 0;      /* bigger “gap” top/bottom */
+  scroll-snap-align: start;
+}
 hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 
-/* Hero (fills first screen; sections start below the fold) */
+/* Hero (nudge content higher) */
 .hero {
   display: grid; grid-template-columns: 480px 1fr;
-  gap: 2rem; align-items: center;
-  min-height: calc(100vh - var(--header-h));   /* key line to keep others out of view initially */
-  margin-top: 0.5rem;
+  gap: 2rem;
+  align-items: start;         /* key: sit a bit higher */
+  padding-top: 2rem;          /* small nudge up */
+  padding-bottom: 3rem;
 }
 .headshot {
   width: 480px; height: 480px; object-fit: cover;
