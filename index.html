@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nicholas Jaehyun Yi | Economics PhD Candidate</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Nicholas Jaehyun Yi — PhD Candidate in Economics at Michigan State University. Research in macro-finance, banking, and supply-chain dynamics." />
+  <meta name="description" content="Nicholas Jaehyun Yi — PhD Candidate in Economics at Michigan State University. Research in macro-finance, banking, and supply chains." />
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Nicholas Jaehyun Yi</a>
+      <a class="brand" href="#top">Nicholas Jaehyun Yi</a>
       <nav>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="cv.html">CV</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <img class="headshot" src="assets/headshot.JPG" alt="Headshot of Nicholas Jaehyun Yi" />
+    <!-- HERO -->
+    <section class="hero section" id="home" aria-label="Introduction">
+      <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Nicholas Jaehyun Yi" />
       <div>
         <h1>Hi, I’m <span class="highlight">Nicholas Jaehyun Yi</span>.</h1>
         <p>
@@ -28,10 +30,63 @@
           My research interests include macro-finance, banking, and supply-chain dynamics.
         </p>
         <p class="cta-row">
-          <a class="button" href="assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
           <a class="button ghost" href="mailto:yinichol@msu.edu">yinichol@msu.edu</a>
         </p>
       </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research" aria-label="Research">
+      <h1>Research</h1>
+
+      <section class="paper">
+        <h2>Job Market Paper</h2>
+        <p><strong>Title:</strong> “Your Paper Title Here”</p>
+        <p><strong>Abstract:</strong> A concise 4–6 sentence abstract describing your main contribution and findings.</p>
+        <p class="links">
+          <a class="button" href="assets/JMP.pdf" target="_blank" rel="noopener">PDF</a>
+          <a class="button ghost" href="assets/JMP_slides.pdf" target="_blank" rel="noopener">Slides</a>
+        </p>
+      </section>
+
+      <hr />
+
+      <section class="paper">
+        <h2>Work in Progress</h2>
+        <ul class="list">
+          <li>“Project Title A” — brief 1–2 sentence summary.</li>
+          <li>“Project Title B” — brief 1–2 sentence summary.</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="section" id="teaching" aria-label="Teaching">
+      <h1>Teaching</h1>
+      <p><em>All appointments below were at Michigan State University (MSU).</em></p>
+
+      <section class="course">
+        <h2>Instructor, Michigan State University</h2>
+        <ul class="list">
+          <li><strong>EC302: Intermediate Macroeconomics</strong> (Summer 22)</li>
+          <li><strong>EC402: Advanced Macroeconomics</strong> (Summer 23)</li>
+        </ul>
+      </section>
+
+      <section class="course">
+        <h2>Teaching Assistant, Michigan State University</h2>
+
+        <h3>Undergraduate</h3>
+        <ul class="list">
+          <li><strong>EC202: Introduction to Macroeconomics</strong> (Spring 22, Spring 23, Spring 24, Fall 24)</li>
+          <li><strong>EC302: Intermediate Macroeconomics</strong> (Fall 20, Spring 21, Fall 23, Spring 25)</li>
+        </ul>
+
+        <h3>Graduate</h3>
+        <ul class="list">
+          <li><strong>EC813A: Macroeconomics Ⅰ</strong> (Fall 21, Fall 22)</li>
+        </ul>
+      </section>
     </section>
   </main>
 
@@ -41,8 +96,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
