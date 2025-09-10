@@ -118,3 +118,25 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 @media (max-width: 480px) {
   .headshot { width: 260px; height: 260px; }
 }
+
+/* --- Teaching section spacing --- */
+#teaching h1 {
+  margin-bottom: 1.5rem;          /* space below "Teaching" */
+}
+
+#teaching .course {
+  margin-top: 2rem;               /* space before each block (Instructor / TA) */
+}
+
+#teaching .course + .course {
+  margin-top: 2.75rem;            /* extra space between Instructor and Teaching Assistant */
+}
+
+#teaching h2 {
+  margin-bottom: 0.75rem;         /* space below "Instructor" / "Teaching Assistant" */
+}
+
+#teaching h3 {
+  margin-top: 1.25rem;            /* space above "Undergraduate"/"Graduate" */
+  margin-bottom: 0.5rem;
+}
