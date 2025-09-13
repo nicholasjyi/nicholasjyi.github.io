@@ -169,3 +169,26 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 @media (max-width: 600px) {
   .cv-page .cv-embed iframe { height: 900px; }
 }
+
+/* Big inline CV on the single-page view */
+#cv .cv-embed {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Fill nearly all available viewport height so only this section shows */
+#cv .cv-embed iframe {
+  width: 100%;
+  height: calc(100vh - var(--header-h) - 140px); /* tweak 140px if needed */
+  border: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  #cv .cv-embed iframe { height: calc(100vh - var(--header-h) - 120px); }
+}
+@media (max-width: 600px) {
+  #cv .cv-embed iframe { height: calc(100vh - var(--header-h) - 100px); }
+}
