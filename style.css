@@ -140,3 +140,32 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
   margin-top: 1.25rem;            /* space above "Undergraduate"/"Graduate" */
   margin-bottom: 0.5rem;
 }
+
+/* ===== CV page: make the PDF BIG ===== */
+.cv-page .container {
+  max-width: 1400px; /* wider canvas on the CV page only */
+}
+
+.cv-page .cv-embed {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.cv-page .cv-embed iframe {
+  width: 100%;
+  height: 1600px; /* much taller viewport for the PDF */
+  border: 0;
+}
+
+/* Responsive heights so it still looks good on smaller screens */
+@media (max-width: 1200px) {
+  .cv-page .cv-embed iframe { height: 1300px; }
+}
+@media (max-width: 900px) {
+  .cv-page .cv-embed iframe { height: 1100px; }
+}
+@media (max-width: 600px) {
+  .cv-page .cv-embed iframe { height: 900px; }
+}
