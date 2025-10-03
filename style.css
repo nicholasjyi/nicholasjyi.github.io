@@ -81,43 +81,41 @@ nav a:hover, nav a.active { color: var(--nav-ink); background: rgba(255,255,255,
 }
 hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 
-/* Hero (intro aligned near the middle of the photo, slightly lower) */
+/* ---- Hero: let portrait photo fit without cropping ---- */
 .hero {
   display: grid;
-  grid-template-columns: 480px 1fr;
+  grid-template-columns: 420px 1fr;  /* width of the photo column (tweak as you like) */
   gap: 2rem;
-  align-items: center;                     /* center both columns vertically */
+  align-items: center;
   min-height: calc(100vh - var(--header-h));
-  padding-top: 0.5rem;                     /* small top padding */
+  padding-top: 0.5rem;
   padding-bottom: 3rem;
 }
 
+/* Make the image use its natural aspect ratio (no forced height) */
 .headshot {
-  width: 480px;
-  height: 480px;
-  object-fit: cover;
+  width: 420px;          /* adjust this number for bigger/smaller frame (e.g., 440, 380) */
+  max-width: 100%;
+  height: auto;          /* key: keep natural aspect ratio */
+  /* REMOVE or override any previous object-fit line */
+  object-fit: unset;     /* ensures no cropping if an old rule exists */
   border-radius: var(--radius-lg);
   border: 3px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
-/* This nudges the intro text a bit *below* the exact middle of the photo. 
-   Adjust 10–36px to taste. */
-.hero .intro {
-  align-self: center;
-  transform: translateY(24px);             /* positive = moves down */
-}
+/* Optional: keep your intro nudge if you added .intro earlier */
+.hero .intro { transform: translateY(24px); }
 
-/* Responsive: stack columns and remove the nudge on small screens */
+/* Responsive fallbacks */
 @media (max-width: 1100px) {
   .hero { grid-template-columns: 1fr; }
-  .headshot { width: 340px; height: 340px; }
-  .hero .intro { transform: none; }
+  .headshot { width: 340px; }   /* still keeps full aspect ratio */
+}
+@media (max-width: 480px) {
+  .headshot { width: 260px; }
 }
 
-@media (max-width: 480px) {
-  .headshot { width: 260px; height: 260px; }
-}
 
 /* --- Teaching section spacing --- */
 #teaching h1 {
