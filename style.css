@@ -190,3 +190,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 @media (max-width: 600px) {
   #cv .cv-embed iframe { height: calc(100vh - var(--header-h) - 100px); }
 }
+
+
+#research h1 {
+  margin-bottom: 2rem;   /* increase or decrease to taste */
+}
